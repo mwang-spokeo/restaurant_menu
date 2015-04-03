@@ -1,0 +1,18 @@
+%h2= @category.title
+
+%ul
+  - @category.items.each do |item|
+    %li
+      %div
+        %strong
+          = item.title
+          = link_to 'Edit', edit_category_item_path(@category, item), class: 'btn btn-xs btn-warning'
+          = link_to 'Delete', category_item_path(@category, item), method: :delete, class: 'btn btn-xs btn-danger'
+        %p= item.ingredients
+        %p= number_to_currency item.cost
+
+%div
+  = link_to 'Edit category', edit_category_path(@category), class: 'btn btn-warning'
+  = link_to 'Delete category', @category, method: :delete, class: 'btn btn-danger'
+  = link_to 'Go back to Menu', categories_path, class: 'btn btn-info'
+  = link_to 'New item', new_category_item_path(@category), class: 'btn btn-primary'

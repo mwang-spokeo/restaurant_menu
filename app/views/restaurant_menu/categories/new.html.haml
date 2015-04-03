@@ -1,0 +1,5 @@
+%h2 New Category
+
+= render partial: 'form', locals: {method: :post, path: categories_path}
+
+= link_to 'Go back to Menu', categories_path

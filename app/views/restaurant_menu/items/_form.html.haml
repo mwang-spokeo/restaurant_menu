@@ -1,0 +1,17 @@
+= form_tag path, method: method, class: 'form-horizontal' do
+  .form-group
+    %label.col-sm-1.control-label Title:
+    .col-sm-2= text_field_tag :title, @item.title, class: 'form-control'
+  .form-group
+    %label.col-sm-1.control-label Price:
+    .col-sm-2= text_field_tag :cost, @item.cost, class: 'form-control'
+  .form-group
+    %label.col-sm-1.control-label Ingredients:
+    .col-sm-5= text_area_tag :ingredients, @item.ingredients, class: 'form-control'
+  .form-group
+    %label.col-sm-1.control-label Note:
+    .col-sm-5
+      = text_field_tag :note, @item.note, class: 'form-control'
+  .form-group
+    .col-sm-offset-1.col-sm-5
+      = submit_tag 'Submit', class: 'btn tbn-sm btn-primary'

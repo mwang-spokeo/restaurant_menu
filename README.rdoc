@@ -1,0 +1,3 @@
+= RestaurantMenu
+
+An example to show RSpec testing with Rail Engines.

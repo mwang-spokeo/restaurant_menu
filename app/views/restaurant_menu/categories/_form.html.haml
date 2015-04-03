@@ -1,0 +1,6 @@
+= form_tag path, method: method, class: 'form-inline' do
+  .form-group
+    %label.control-label Title:
+    = text_field_tag :title, @category.title, class: 'form-control'
+  = submit_tag 'Submit', class: 'btn btn-sm btn-primary'
+

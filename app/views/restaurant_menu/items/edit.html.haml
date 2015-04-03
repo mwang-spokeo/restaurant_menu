@@ -1,0 +1,5 @@
+%h2 Editing Item
+
+=render partial: 'form', locals: {method: :put, path: category_item_path(@item.category_id, @item.id)}
+
+= link_to 'Back', category_path(params[:category_id])

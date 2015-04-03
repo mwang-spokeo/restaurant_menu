@@ -1,0 +1,5 @@
+%h2 New Item
+
+= render partial: 'form', locals: {method: :post, path: category_items_path(params[:category_id])}
+
+= link_to 'Back', category_path(params[:category_id])

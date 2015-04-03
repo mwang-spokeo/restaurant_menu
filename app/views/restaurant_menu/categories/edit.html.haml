@@ -1,0 +1,7 @@
+%h2 Change Category Title
+
+= render partial: 'form', locals: {method: :put, path: category_path(@category)}
+
+= link_to 'Show all choices in this category', @category
+%br
+= link_to 'Go back to Menu', categories_path

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RestaurantMenu</title>
+  <%= stylesheet_link_tag    "restaurant_menu/application", media: "all" %>
+  <%= javascript_include_tag "restaurant_menu/application" %>
+  <%= bootstrap_stylesheet_include_tag :default, compressed: true %>
+  <%= bootstrap_javascript_include_tag :default, compressed: true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
